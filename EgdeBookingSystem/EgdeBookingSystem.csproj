@@ -5,6 +5,7 @@
     <UserSecretsId>aspnet-EgdeBookingSystem-EFB8EA25-4E99-4D4A-9631-E224A2CA6290</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>.</DockerfileContext>
+    <DockerComposeProjectPath>docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
 
   <ItemGroup>

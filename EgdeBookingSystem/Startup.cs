@@ -12,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity.UI.Services;
 
 namespace EgdeBookingSystem
 {
@@ -27,12 +28,25 @@ namespace EgdeBookingSystem
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
-            services.AddRazorPages();
+            {
+                // Database connection string.
+                // Make sure to update the Password value below from "your_password" to your actual password.
+                var connection = @"Server=db;Database=master;User=sa;Password=Password123@;";
+
+                // This line uses 'UseSqlServer' in the 'options' parameter
+                // with the connection string defined above.
+                services.AddDbContext<ApplicationDbContext>(
+                    options => options.UseSqlServer(connection));
+                services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                    .AddEntityFrameworkStores<ApplicationDbContext>();
+                services.AddRazorPages();
+            
+                services.AddMvc();
+
+                // Add application services.
+           //     services.AddTransient<IEmailSender, AuthMessageSender>();
+            //    services.AddTransient<ISmsSender, AuthMessageSender>();
+            }
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

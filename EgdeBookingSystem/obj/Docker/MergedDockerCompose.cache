@@ -1,0 +1,16 @@
+services:
+  egdebookingsystem:
+    build:
+      context: C:\Users\nerga\Bachelor\dockerTest\Go4IT\EgdeBookingSystem
+      dockerfile: Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: egdebookingsystem
+    ports:
+    - target: 80
+    - target: 443
+    volumes:
+    - C:\Users\nerga\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\nerga\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+version: '3.4'

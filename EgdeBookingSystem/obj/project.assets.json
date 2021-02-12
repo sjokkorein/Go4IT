@@ -9261,19 +9261,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\magnu\\.nuget\\packages\\": {}
+    "C:\\Users\\nerga\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\magnu\\source\\repos\\Go4IT\\EgdeBookingSystem\\EgdeBookingSystem.csproj",
+      "projectUniqueName": "C:\\Users\\nerga\\Bachelor\\dockerTest\\Go4IT\\EgdeBookingSystem\\EgdeBookingSystem.csproj",
       "projectName": "EgdeBookingSystem",
-      "projectPath": "C:\\Users\\magnu\\source\\repos\\Go4IT\\EgdeBookingSystem\\EgdeBookingSystem.csproj",
-      "packagesPath": "C:\\Users\\magnu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\magnu\\source\\repos\\Go4IT\\EgdeBookingSystem\\obj\\",
+      "projectPath": "C:\\Users\\nerga\\Bachelor\\dockerTest\\Go4IT\\EgdeBookingSystem\\EgdeBookingSystem.csproj",
+      "packagesPath": "C:\\Users\\nerga\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\nerga\\Bachelor\\dockerTest\\Go4IT\\EgdeBookingSystem\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\magnu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\nerga\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9352,7 +9352,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   }

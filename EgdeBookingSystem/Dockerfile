@@ -7,10 +7,10 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
-COPY ["EgdeBookingSystem.csproj", ""]
-RUN dotnet restore "./EgdeBookingSystem.csproj"
+COPY ["EgdeBookingSystem.csproj", "./"]
+RUN dotnet restore "EgdeBookingSystem.csproj"
 COPY . .
-WORKDIR "/src/."
+WORKDIR "/src/"
 RUN dotnet build "EgdeBookingSystem.csproj" -c Release -o /app/build
 
 FROM build AS publish
@@ -20,3 +20,12 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "EgdeBookingSystem.dll"]
+
+FROM microsoft/aspnetcore-build:lts
+COPY . /app
+WORKDIR /app
+RUN ["dotnet", "restore"]
+RUN ["dotnet", "build"]
+EXPOSE 80/tcp
+RUN chmod +x ./entrypoint.sh
+CMD /bin/bash ./entrypoint.sh
